@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { Button, Input, Pagination, Select, TextArea } from "../ui";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { withMask } from "use-mask-input";
 
 export const FormPage = () => {
   const getSavedValues = () => {
@@ -110,7 +111,7 @@ export const FormPage = () => {
             placeholder="890-000-000-00-000"
             label="№ УНФ или отсутствует"
             error={errors.unf}
-            type="number"
+            ref={withMask('999-999-999-99-999')}
           />
         </div>
         <div className="flex flex-col justify-between gap-[25px]">
