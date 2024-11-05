@@ -19,3 +19,6 @@ export const Pagination = () => {
     </div>
   );
 };
+
+
+Pagination.displayName = 'Pagination'

@@ -20,3 +20,6 @@ export const Button = (props: IButton) => {
     </button>
   );
 };
+
+Button.displayName = 'Button'
+

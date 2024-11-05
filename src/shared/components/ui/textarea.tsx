@@ -34,3 +34,6 @@ export const TextArea = forwardRef<HTMLTextAreaElement, ITextarea>(
     );
   }
 );
+
+
+TextArea.displayName = 'TextArea'
