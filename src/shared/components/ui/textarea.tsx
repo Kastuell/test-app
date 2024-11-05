@@ -14,8 +14,11 @@ interface ITextarea
 export const TextArea = forwardRef<HTMLTextAreaElement, ITextarea>(
   ({ className, label, error, ...props }, ref) => {
     return (
-      <div className={styles.textarea_wrapper}>
-        <label className={styles.textarea_label} htmlFor={label}>
+      <div className="flex flex-col gap-[14px] max-w-[498px]">
+        <label
+          className="text-primary opacity-70 text-[15px] font-semibold leading-[19px]"
+          htmlFor={label}
+        >
           {label}
         </label>
         <textarea
@@ -23,7 +26,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, ITextarea>(
             borderColor: error !== undefined ? "red" : "",
           }}
           id={label}
-          className={styles.textarea}
+          className="lg:min-w-[498px] max-w-[498px] h-[157px] rounded-[6px] min-h-[54px] pt-4 pl-[18px] border border-primary/[0.19] placeholder:text-primary/[0.4]"
           ref={ref}
           {...props}
         />
