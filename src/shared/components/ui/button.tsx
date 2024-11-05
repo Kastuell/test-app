@@ -21,5 +21,4 @@ export const Button = (props: IButton) => {
   );
 };
 
-Button.displayName = 'Button'
-
+Button.displayName = "Button";
